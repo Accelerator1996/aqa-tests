@@ -816,7 +816,7 @@ def post(output_name) {
 }
 
 def testBuild() {
-	TIME_LIMIT =  params.TIME_LIMIT ? params.TIME_LIMIT.toInteger() : 10
+	TIME_LIMIT =  params.TIME_LIMIT ? params.TIME_LIMIT.toInteger() : 24
 	timeout(time: TIME_LIMIT, unit: 'HOURS') {
 		try {
 			addJobDescription()
