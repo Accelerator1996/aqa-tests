@@ -3,15 +3,15 @@
 def PLATFORM_MAP = [
     'arm_linux' : [
         'SPEC' : 'linux_arm',
-        'LABEL' : 'ci.role.test&&sw.os.linux&&hw.arch.aarch32',
+        'LABEL' : 'ci.role.test.jadegc&&sw.os.linux&&hw.arch.aarch32',
     ],
     'aarch64_mac' : [
         'SPEC' : 'osx_aarch64',
-        'LABEL' : 'ci.role.test&&hw.arch.aarch64&&(sw.os.osx||sw.os.mac)',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.aarch64&&(sw.os.osx||sw.os.mac)',
     ],
     'aarch64_linux' : [
         'SPEC' : 'linux_aarch64',
-        'LABEL' : 'ci.role.test&&sw.os.linux&&hw.arch.aarch64',
+        'LABEL' : 'ci.role.test.jadegc&&sw.os.linux&&hw.arch.aarch64',
     ],
     'aarch64_windows' : [
         'SPEC' : 'windows_aarch64',
@@ -19,101 +19,101 @@ def PLATFORM_MAP = [
     ],
     'aarch64_alpine-linux' : [
         'SPEC' : 'alpine-linux_aarch64',
-        'LABEL' : 'ci.role.test&&hw.arch.aarch64&&sw.os.alpine-linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.aarch64&&sw.os.alpine-linux',
     ],
     'ppc32_aix' : [
         'SPEC' : 'aix_ppc',
-        'LABEL' : 'ci.role.test&&hw.arch.ppc64&&sw.os.aix',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.ppc64&&sw.os.aix',
     ],
     'ppc32_linux' : [
         'SPEC' : 'linux_ppc',
-        'LABEL' : 'ci.role.test&&hw.arch.ppc64&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.ppc64&&sw.os.linux',
     ],
     'ppc64_aix' : [
         'SPEC' : 'aix_ppc-64',
-        'LABEL' : 'ci.role.test&&hw.arch.ppc64&&sw.os.aix',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.ppc64&&sw.os.aix',
     ],
     'ppc64_linux' : [
         'SPEC' : 'linux_ppc-64',
-        'LABEL' : 'ci.role.test&&hw.arch.ppc64&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.ppc64&&sw.os.linux',
     ],
     'ppc64le_linux' : [
         'SPEC' : 'linux_ppc-64_le',
-        'LABEL' : 'ci.role.test&&hw.arch.ppc64le&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.ppc64le&&sw.os.linux',
         'DynamicAgents' : ['fyre']
     ],
     'riscv64_linux' : [
         'SPEC' : 'linux_riscv64',
-        'LABEL' : 'ci.role.test&&sw.os.linux&&hw.arch.riscv&&hw.bits.64',
+        'LABEL' : 'ci.role.test.jadegc&&sw.os.linux&&hw.arch.riscv&&hw.bits.64',
     ],
     'riscv64_linux_xl' : [
         'SPEC' : 'linux_riscv64',
-        'LABEL' : 'ci.role.test&&sw.os.linux&&hw.arch.riscv&&hw.bits.64',
+        'LABEL' : 'ci.role.test.jadegc&&sw.os.linux&&hw.arch.riscv&&hw.bits.64',
     ],
     's390_linux' : [
         'SPEC' : 'linux_390',
-        'LABEL' : 'ci.role.test&&hw.arch.s390x&&sw.os.linux&&hw.bits.32',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.s390x&&sw.os.linux&&hw.bits.32',
     ],
     's390x_linux_zt' : [
         'SPEC' : 'linux_390-64_zt',
-        'LABEL' : 'ci.role.test&&hw.arch.znext&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.znext&&sw.os.linux',
     ],
     's390x_linux' : [
         'SPEC' : 'linux_390-64',
-        'LABEL' : 'ci.role.test&&hw.arch.s390x&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.s390x&&sw.os.linux',
     ],
     's390x_zos' : [
         'SPEC' : 'zos_390-64',
-        'LABEL' : 'ci.role.test&&hw.arch.s390x&&sw.os.zos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.s390x&&sw.os.zos',
     ],
     's390x_zos_xl' : [
         'SPEC' : 'zos_390-64',
-        'LABEL' : 'ci.role.test&&hw.arch.s390x&&sw.os.zos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.s390x&&sw.os.zos',
     ],
     's390x_zos_zt' : [
         'SPEC' : 'zos_390-64_zt',
-        'LABEL' : 'ci.role.test&&hw.arch.znext&&sw.os.zos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.znext&&sw.os.zos',
     ],
     's390_zos_zt' : [
         'SPEC' : 'zos_390_zt',
-        'LABEL' : 'ci.role.test&&hw.arch.znext&&sw.os.zos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.znext&&sw.os.zos',
     ],
     's390_zos' : [
         'SPEC' : 'zos_390',
-        'LABEL' : 'ci.role.test&&hw.arch.s390x&&sw.os.zos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.s390x&&sw.os.zos',
     ],
     'sparcv9_solaris' : [
         'SPEC' : 'sunos_sparcv9-64',
-        'LABEL' : 'ci.role.test&&hw.arch.sparcv9&&sw.os.sunos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.sparcv9&&sw.os.sunos',
     ],
     'x86-64_solaris' : [
         'SPEC' : 'sunos_x86-64',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&sw.os.sunos',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&sw.os.sunos',
     ],
     'x86-64_alpine-linux' : [
         'SPEC' : 'alpine-linux_x86-64',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&sw.os.alpine-linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&sw.os.alpine-linux',
     ],
     'x86-32_linux' : [
         'SPEC' : 'linux_x86',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&sw.os.linux',
     ],
     'x86-32_windows' : [
         'SPEC' : 'win_x86',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&sw.os.windows',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&sw.os.windows',
     ],
     'x86-64_linux' : [
         'SPEC' : 'linux_x86-64',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&sw.os.linux',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&sw.os.linux',
         'DynamicAgents' : ['azure', 'fyre']
     ],
     'x86-64_mac' : [
         'SPEC' : 'osx_x86-64',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&(sw.os.osx||sw.os.mac)',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&(sw.os.osx||sw.os.mac)',
     ],
     'x86-64_windows' : [
         'SPEC' : 'win_x86-64',
-        'LABEL' : 'ci.role.test&&hw.arch.x86&&sw.os.windows',
+        'LABEL' : 'ci.role.test.jadegc&&hw.arch.x86&&sw.os.windows',
     ],
 ]
 
@@ -171,7 +171,7 @@ timestamps{
             } else {
                 LABEL = PLATFORM_MAP[params.PLATFORM]["LABEL"]
                     if (params.BUILD_LIST.contains("perf")) {
-                        def perfLabel = LABEL.minus("ci.role.test&&").concat("&&ci.role.perf")
+                        def perfLabel = LABEL.minus("ci.role.test.jadegc&&").concat("&&ci.role.perf")
                         if (areNodesWithLabelOnline(perfLabel)) {
                         LABEL = perfLabel
                         }
@@ -187,10 +187,16 @@ timestamps{
                 }
             }
 
+<<<<<<< HEAD
             // Temporarily exclude ubuntu 22 machines for criu sanity.external pipeline
             if (JOB_NAME.contains ("sanity.external") && JOB_NAME.contains("_criu")) {
                 LABEL += "&&!sw.os.ubuntu.22"
             }
+=======
+        if (params.TEST_FLAG == "FIPS") {
+            LABEL = LABEL.minus("ci.role.test.jadegc&&").concat("&&ci.role.test.jadegc.fips")
+        }
+>>>>>>> 9e9177d0... jadegc machine label changed to ci.role.test.jadegc
 
             if (params.DOCKER_REQUIRED) {
                 LABEL += "&&sw.tool.docker"
@@ -234,11 +240,19 @@ timestamps{
                                 }
                             }
                         }
+<<<<<<< HEAD
                         if (!isNodeIdle) {
                             println "Cannot find any idle nodes. Starting dynamic vm"
                             LABEL = LABEL.minus("ci.role.test&&")
                             LABEL += '&&ci.agent.dynamic'
                         }
+=======
+                    }
+                    if (!isNodeIdle) {
+                        println "Cannot find any idle nodes. Starting dynamic vm"
+                        LABEL = LABEL.minus("ci.role.test.jadegc&&")
+                        LABEL += '&&ci.agent.dynamic'
+>>>>>>> 9e9177d0... jadegc machine label changed to ci.role.test.jadegc
                     }
                 }
 

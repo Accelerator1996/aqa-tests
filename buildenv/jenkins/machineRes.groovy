@@ -8,13 +8,13 @@ timestamps {
             echo "NODE value passed is a specific machine"
             // Get Node's labels
             def nodeLabels = matchingNodes[0].getLabelString().tokenize(' ')
-            if (!nodeLabels.contains("ci.role.test")) {
-                error "Cannot reserve a machine that does not contain ci.role.test label. Please select a different machine."
+            if (!nodeLabels.contains("ci.role.test.jadegc")) {
+                error "Cannot reserve a machine that does not contain ci.role.test.jadegc label. Please select a different machine."
             }
         } else {
             echo "NODE value passed is a set of label(s)"
-            // Only allow reserving machines with ci.role.test
-            NODE += "&&ci.role.test"
+            // Only allow reserving machines with ci.role.test.jadegc
+            NODE += "&&ci.role.test.jadegc"
         }
         node (NODE) {
             try {
