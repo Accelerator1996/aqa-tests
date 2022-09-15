@@ -258,7 +258,7 @@ getBinaryOpenjdk()
 	if [ "${download_url}" != "" ]; then
 		for file in $download_url
 		do
-			executeCmdWithRetry "${file##*/}" "_ENCODE_FILE_NEW=UNTAGGED curl -OLJSk${CURL_OPTS} ${curl_options} $file"
+			executeCmdWithRetry "${file##*/}" "_ENCODE_FILE_NEW=UNTAGGED curl -OLJSk${CURL_OPTS} -C - ${curl_options} $file"
 			rt_code=$?
 			if [ $rt_code != 0 ]; then
 				echo "curl error code: $rt_code"
@@ -467,10 +467,10 @@ executeCmdWithRetry()
 	count=0
 	rt_code=-1
 	# when the command is not found (code 127), do not retry
-	while [ "$rt_code" != 0 ] && [ "$rt_code" != 127 ] && [ "$count" -le 5 ]
+	while [ "$rt_code" != 0 ] && [ "$rt_code" != 127 ] && [ "$count" -le 15 ]
 	do
 		if [ "$count" -gt 0 ]; then
-			sleep_time=300
+			sleep_time=30
 			echo "error code: $rt_code. Sleep $sleep_time secs, then retry $count..."
 			sleep $sleep_time
 
