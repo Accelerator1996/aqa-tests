@@ -141,6 +141,10 @@ def setupEnv() {
 	} else {
 		sh 'printenv'
 	}
+        if ( params.USE_GIT_SSH ) {
+                sh "git config --local url.'git@github.com:'.insteadOf 'https://github.com/'"
+                sh "git config --local url.'git@gitlab.com:'.insteadOf 'https://gitlab.com/'"
+        }
 }
 
 def setupParallelEnv() {
